@@ -62,6 +62,14 @@ public class ReportResource {
     // We could, for example, get header information, or the requestor's address.
 	@Context
 	Request request;
+
+	@GET
+	@Path("test")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getSamplePerson() {
+		return "Test";
+	}
+
 	
 	@POST
 	@Path("/get-list")
